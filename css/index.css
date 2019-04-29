@@ -144,6 +144,7 @@ h1 {
 }
 
 .flex-vertical {
+    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
@@ -218,6 +219,11 @@ ul {
 }
 
 
+/* Added small margin so Services header and paragraph don't reach the screen edges */
+.services.flex-vertical-left {
+    margin: auto 10px;
+}
+
 .flex-vertical-left {
     display: flex;
     flex-flow: column nowrap;
@@ -229,7 +235,7 @@ h3 {
     font-weight: bold;
 }
 
-#services {
+#services-title {
     margin-top: 25px;
 }
 
@@ -356,8 +362,12 @@ footer img {
     
     /* SERVICES PAGE CSS */
     
+    .services-header-img {
+        display: none;
+    }
+    
     .box {
-        width: 98%;
+        width: 90%;
     }
     
 }
