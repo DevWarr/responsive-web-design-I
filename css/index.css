@@ -342,10 +342,23 @@ footer img {
         font-size: 1.2em;
         padding: 20px 0;
         border-bottom: 1px solid black;
+        transition: background 0.1s linear;
+        /* Looks like only one transition works at a  time. So I noted this one out. */
+/*        transition: color 0.15s linear;*/
+    }
+    
+    nav a:hover {
+        background: gray;
+        color: white;
     }
 
+    /* Set Great Idea image to have a little padding, and no hover animation. */
     nav a:first-of-type {
         padding-bottom: 0;
+    }
+    
+    nav a:first-of-type:hover {
+        background: none;
     }
     
     
