@@ -168,15 +168,20 @@ img {
 
 /* Services specific code: */
 
+.boxes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
 
 .box {
     box-sizing: border-box;
     background: #f4f3f4;
     padding: 15px;
     min-width: 50px;
-    width: 48%;
+    width: 46%;
     border: 1px solid black;
-    margin: 20px 0;
+    margin: 20px 0px;
     
     display: flex;
     flex-direction: column;
