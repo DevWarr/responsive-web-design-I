@@ -65,6 +65,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
 }
 
 nav a {
@@ -159,10 +160,6 @@ img {
 /* Services specific code: */
 
 
-.side-page {
-    font-weight: bold;
-}
-
 .box {
     box-sizing: border-box;
     background: #f4f3f4;
@@ -232,9 +229,27 @@ footer img {
 
 
 
+/* Media Queries: */
+
+@media only screen and (max-width: 800px) {
+    
+}
 
 
-
-
+@media only screen and (max-width: 500px) {
+    
+    #circle {
+        display: none;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    .logo {
+        order: 0;
+    }
+    
+}
 
 
