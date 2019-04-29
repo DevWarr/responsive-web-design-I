@@ -233,7 +233,11 @@ footer section {
 }
 
 footer img {
+    order: 10;
     margin-left: 20px;
+    /* Keeps image from resizing for smaller page sizes */
+    width: auto;
+    height: 300px;
 }
 
 
@@ -296,6 +300,22 @@ footer img {
         padding: 10px;
     }
     
+    
+    /* SERVICES PAGE CSS */
+    
+    
+    /* The footer div that was once flexing by row is now flexing by column */
+    .services.flex-horizontal {
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    .services-info-img {
+        order: 0;
+        margin-bottom: 15px;
+    }
+    
+    
 }
 
 
@@ -325,6 +345,14 @@ footer img {
     
     article {
         width: 90%;
+    }
+    
+    
+    
+    /* SERVICES PAGE CSS */
+    
+    .box {
+        width: 98%;
     }
     
 }
