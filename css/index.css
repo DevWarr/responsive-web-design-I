@@ -94,6 +94,9 @@ nav a:first-of-type {
 }
 
 #start {
+    /* Slight font changes based on template image */
+    font-family: "Arial";
+    font-size: 1.05em;    
     text-decoration: none;
     color: black;
     box-sizing: border-box;
