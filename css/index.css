@@ -129,8 +129,8 @@ h1 {
 }
 
 .container {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     margin: 30px 0;
 
 }
@@ -239,6 +239,7 @@ footer img {
 
 @media only screen and (max-width: 800px) {
     
+    /* A bunch of nav reworking to center everything properly for mobile viewing */
     nav {
         flex-wrap: wrap;
         padding: 0 20px;
@@ -252,36 +253,52 @@ footer img {
     }
     
     nav a:first-of-type {
+        /* This lets the logo take up a full row in flexbox */
         width: 100%;
         order: 0;
     }
     
     .logo {
+        /* The logo now appears above everything else. The set-pixel width keeps it from growing and shrinking(183px is the image's actual width) */
         display: block;
         width: 183px;
         margin: 0 auto 20px;
     }
     
     #start {
+        /* Move the button down slightly */
         margin: 20px 0 -5px 0;
     }
     
     #circle {
+        /* Hide the Cricle */
         display: none;
     }
     
     
     .flex-vertical {
+        /* Fits the page into the smaller screen */
+        /* Percentage lets it be scaleable */
         width: 98%;
     }
     
+    .flex-horizontal {
+        /* Padding so articles aren't touching the screen edges. */
+        /* NOT applied to flex-vertical so that the image is full-width */
+        padding: 0 10px;
+    }
+    
+    footer {
+        /* Again, padding to footer content is away from edges */
+        padding: 10px;
+    }
     
 }
 
 
 @media only screen and (max-width: 500px) {
     
-
+    /* Re-reworking so even smaller screens have a good view */
     nav {
         padding: 0;
     }
@@ -297,6 +314,8 @@ footer img {
         padding-bottom: 0;
     }
     
+    
+    /* This and the article tag let the page only show one article per row */
     .flex-horizontal {
         flex-wrap: wrap;
     }
