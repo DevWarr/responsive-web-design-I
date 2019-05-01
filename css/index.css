@@ -1,3 +1,393 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
+
+body {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+nav {
+    margin: 20px 0;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav a {
+    display: inline-block;
+    margin-right:45px;
+    text-decoration: none;
+    color: #bebebe;
+}
+nav a:first-of-type {
+    order: 10;
+}
+
+.logo {
+    margin: 0 0 0 40px;
+    /* This code was making the image change sizes, so I cut it out */
+/*    width: 100%;*/
+}
+
+#innovation {
+    text-align: center;
+    font-weight: normal;
+}
+
+#light {
+    border-radius: 70px;
+}
+
+#start {
+    /* Slight font changes based on template image */
+    font-family: "Arial";
+    font-size: 1.05em;    
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 7px 50px;
+    margin-bottom: 15px;
+}
+
+#start:hover {
+  background: black;
+  border: 1px solid white;
+  color: white; 
+}
+
+.sans {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 0.5px;
+  font-weight: bold;
+}
+
+article {
+    margin: 30px 0;
+    padding: 0.5%;
+/*    width: 100px;*/
+}
+
+h1 {
+    font-size: 500%;
+}
+
+.main {
+    margin: 50px 0 90px;
+}
+
+.container {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+
+}
+
+.flex-horizontal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-vertical {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+span {
+    line-height: 2;
+}
+
+center {
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+img {
+    width: inherit;
+}
+
+
+
+
+/* Services specific code: */
+
+.boxes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.box {
+    box-sizing: border-box;
+    background: #f4f3f4;
+    padding: 15px;
+    min-width: 50px;
+    width: 46%;
+    border: 1px solid black;
+    margin: 20px 0px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.box a {
+    background: white;
+    color: black;
+    transition: color .15s linear;
+    transition: background .15s linear;
+    text-decoration: none;
+    font-size: 12px;
+    
+    box-sizing: border-box;
+    padding: 10px 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.box a:hover {
+    background: black;
+    color: white;
+    border: 1px solid white;
+/*    transition-duration: .15s;*/
+}
+
+ul {
+    list-style-type: square;
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 2;
+}
+
+
+/* Added small margin so Services header and paragraph don't reach the screen edges */
+.services.flex-vertical-left {
+    margin: auto 10px;
+}
+
+.flex-vertical-left {
+    display: flex;
+    flex-flow: column nowrap;
+/*    justify-content: space-between;*/
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#services-title {
+    margin-top: 25px;
+}
+
+footer section {
+    margin-right: 30px;
+}
+
+footer img {
+    order: 10;
+    margin-left: 20px;
+    /* Keeps image from resizing for smaller page sizes */
+    width: auto;
+    height: 300px;
+}
+
+
+
+
+/* Media Queries: */
+
+@media only screen and (max-width: 800px) {
+    
+    /* A bunch of nav reworking to center everything properly for mobile viewing */
+    nav {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    
+    nav a {
+        margin-right: 0;
+        width: 15%;
+        text-align: center;
+/*        margin-right: 0;*/
+    }
+    
+    nav a:first-of-type {
+        /* This lets the logo take up a full row in flexbox */
+        width: 100%;
+        order: 0;
+    }
+    
+    .logo {
+        /* The logo now appears above everything else. The set-pixel width keeps it from growing and shrinking(183px is the image's actual width) */
+        display: block;
+        width: 183px;
+        margin: 0 auto 20px;
+    }
+    
+    #start {
+        /* Move the button down slightly */
+        margin: 20px 0 -5px 0;
+    }
+    
+    #circle {
+        /* Hide the Cricle */
+        display: none;
+    }
+    
+    
+    .flex-vertical {
+        /* Fits the page into the smaller screen */
+        /* Percentage lets it be scaleable */
+        width: 98%;
+    }
+    
+    .flex-horizontal {
+        /* Padding so articles aren't touching the screen edges. */
+        /* NOT applied to flex-vertical so that the image is full-width */
+        padding: 0 10px;
+    }
+    
+    footer {
+        /* Again, padding to footer content is away from edges */
+        padding: 10px;
+    }
+    
+    
+    /* SERVICES PAGE CSS */
+    
+    
+    /* The footer div that was once flexing by row is now flexing by column */
+    .services.flex-horizontal {
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    .services-footer-img {
+        order: 0;
+        margin-bottom: 15px;
+    }
+    
+    
+}
+
+
+@media only screen and (max-width: 500px) {
+    
+    /* Re-reworking so even smaller screens have a good view */
+    nav {
+        padding: 0;
+    }
+    
+    nav a {
+        width: 100%;
+        font-size: 1.2em;
+        padding: 20px 0;
+        border-bottom: 1px solid black;
+        transition: background 0.1s linear;
+        /* Looks like only one transition works at a  time. So I noted this one out. */
+/*        transition: color 0.15s linear;*/
+    }
+    
+    nav a:hover {
+        background: gray;
+        color: white;
+    }
+
+    /* Set Great Idea image to have a little padding, and no hover animation. */
+    nav a:first-of-type {
+        padding-bottom: 0;
+    }
+    
+    nav a:first-of-type:hover {
+        background: none;
+    }
+    
+    
+    /* This and the article tag let the page only show one article per row */
+    .flex-horizontal {
+        flex-wrap: wrap;
+    }
+    
+    article {
+        width: 90%;
+    }
+    
+    
+    
+    /* SERVICES PAGE CSS */
+    
+    .services-header-img {
+        display: none;
+    }
+    
+    .box {
+        width: 90%;
+    }
+    
+    .services-footer-img {
+        display: none;
+    }
+    
+}
 
 
